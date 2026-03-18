@@ -30,7 +30,7 @@ jobs:
       # Drafts your next Release notes as Pull Requests are merged into "master"
       - name: Pull Requests Autolabeler
         if: github.event_name == 'pull_request'
-        uses: release-drafter/release-drafter@v5
+        uses: release-drafter/release-drafter@v7
         # (Optional) specify config name to use, relative to .github/. Default: release-drafter.yml
         with:
           disable-releaser: true
@@ -39,7 +39,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Create or Update Release Draft
         if: github.event_name == 'push'
-        uses: release-drafter/release-drafter@v5
+        uses: release-drafter/release-drafter@v7
         # (Optional) specify config name to use, relative to .github/. Default: release-drafter.yml
         with:
           disable-autolabeler: true
